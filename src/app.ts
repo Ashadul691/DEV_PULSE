@@ -5,7 +5,7 @@ import globalErrorHandler from "./middleware/globalErrorHandler";
 import express, { type Application, type Request, type Response } from "express";
 import { authRoute } from "./module/auth/auth.route";
 import { issueRoute } from "./module/issue/issue.route";
-import { metricsRoute } from "./module/metrics/metrics.route";
+
 
 
 
@@ -23,7 +23,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/issues", issueRoute);
-app.use("/api/metrics", metricsRoute);
+
 
 app.use(globalErrorHandler);
 export default app;
